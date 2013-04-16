@@ -7,6 +7,8 @@ define s3cmd::config (
 ) {
   $path = $name
 
+  include s3cmd
+
   file { $path:
     content => template('s3cmd/s3cfg.erb'),
     owner   => $owner,
