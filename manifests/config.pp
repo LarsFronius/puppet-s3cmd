@@ -14,5 +14,6 @@ define s3cmd::config (
     owner   => $owner,
     group   => $group,
     mode    => '0400',
+    require => Package['s3cmd']
   }
 }
